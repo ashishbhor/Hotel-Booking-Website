@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Royal respite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Assets/logo.jpg" type="image/x-icon">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to <span style="color: orange;">Royal respite</span></h1><br>
+        </div>
+        <div id="para">
+            <p>We Provide rooms at a very good price along with great amenities to make your living experience awesome</p><br>
+            <button class="book">Explore</button>
+        </div> 
+    </section>
+    <section class="aboutus">
+        <h1>About us</h1>
+        <div id="About">
+            <p>Looking for a vacation to leave behind the hustle of everyday life and indulge in world-class hospitality at exotic locations? Look no further than the leading & fastest growing hotel chain of Eastern India, Hotel Royal respite. Your unwinding days with us will be the perfect blend of leisure, comfort, convenience & class.</p>
+            <br>
+            <p>We are currently present at Puri, Mandarmoni, Kolaghat, Tarapith, Darjeeling, Taki & Sundarban to make your well deserved vacation a truly unforgettable affair.</p><br><br>
+        </div>
+        <section class="pho-box">
+            <div class="container">
+                <div class="card__container">
+                    <article class="card__article">
+                        <img src="Assets/1room.jpeg" alt="image" class="card__img">
+                        <div class="card__data">
+                            <span class="card__description">Master Hall</span>
+                            <h2 class="card__title">Single Room</h2>
+                            <a href="#" class="card__button">Read More</a>
+                         </div>
+                      </article>
+                      <article class="card__article">
+                        <img src="Assets/2room.webp" alt="image" class="card__img">
+          
+                        <div class="card__data">
+                           <span class="card__description">Master Hall,Master bedroom</span>
+                           <h2 class="card__title">Executive Suite</h2>
+                           <a href="#" class="card__button">Read More</a>
+                        </div>
+                     </article>
+          
+                     <article class="card__article">
+                        <img src="Assets/3room.jpeg" alt="image" class="card__img">
+          
+                        <div class="card__data">
+                           <span class="card__description">The most luxurious,multiple bedrooms,dining area</span>
+                           <h2 class="card__title">Presidential Suite</h2>
+                           <a href="#" class="card__button">Read More</a>
+                        </div>
+                     </article>
+                </div>
+            </div>
+        </section>
+    </section>
+    <hr id="hr1">
+    <section class="amenities">
+        <h1 id="ame">Amenities we serve</h1>
+        <div id="hospitality">
+            <p>we provide an experience of refined luxury and heartfelt hospitality. Every guest is treated like royalty, with personalized care that ensures comfort and tranquility.</p>
+            <p>Our commitment to excellence creates an atmosphere of warmth and grace, where each moment is crafted to leave you feeling relaxed and cherished. At Royal Respite, we don’t just meet expectations, we elevate them.</p>
+        </div>
+        <div class="container2">
+            <div class="all-img">
+                <article>
+                    <img src="Assets/internet.webp" alt="1">
+                    <div id="headline">
+                        <h1> <i class="fa-solid fa-wifi"></i>&nbsp; High speed internet</h1>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="Assets/seacutity.webp" alt="1">
+                    <div id="headline">
+                        <h1> <i class="fa-solid fa-lock"></i>&nbsp; Security</h1>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="Assets/pool.jpeg" alt="1">
+                    <div id="headline">
+                        <h1>  <i class="fa-solid fa-person-swimming"></i>&nbsp;  Swimming pool</h1>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="Assets/breakfast.jpeg" alt="1">
+                    <div id="headline">
+                        <h1><i class="fa-solid fa-bowl-food"></i>&nbsp;  Complimentary Breakfast</h1>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="Assets/cafe.jpeg" alt="1">
+                    <div id="headline">
+                        <h1><i class="fa-solid fa-utensils"></i>&nbsp;  Cafeteria</h1>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="Assets/gym.webp" alt="1">
+                    <div id="headline">
+                        <h1><i class="fa-solid fa-dumbbell"></i>&nbsp;  Gym</h1>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="fill-up">
+        <div class="booking-container">
+            <form id="bookingForm" onsubmit="return validateForm()">
+                <div class="form-header">
+                    <h2>Luxury Stay Booking</h2>
+                    <p>Fill in your details for a memorable experience</p>
+                </div>
+    
+                <div class="form-grid">
+                    <div class="form-group">
+                        <input type="text" id="userName" required>
+                        <label>Full Name</label>
+                        <span class="focus-border"></span>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label>Email Address</label>
+                        <span class="focus-border"></span>
+                    </div>
+    
+                    <div class="form-group phone-group">
+                        <input type="tel" id="phone" required maxlength="14">
+                        <label>Phone Number</label>
+                        <span class="focus-border"></span>
+                    </div>
+    
+                    <div class="form-group">
+                        <select id="nationality" required>
+                            <option value="">Select Nationality</option>
+                            <option value="IN">Indian</option>
+                            <option value="US">American</option>
+                            <option value="UK">British</option>
+                            <option value="AU">Australian</option>
+                            <option value="CA">Canadian</option>
+                            <option value="SG">Singaporean</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="aadharCard" maxlength="14" oninput="handleAadharInput(event)" required > 
+                        <label>Aadhar Card Number</label>
+                        <span class="focus-border"></span>
+                    </div>
+    
+                    <div class="form-group">
+                        <select id="adults" required>
+                            <option value="">Number of Adults</option>
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <select id="children" required>
+                            <option value="">Number of Children</option>
+                            <option value="0">No Children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="date" id="checkIn" required>
+                        <label>Check-in Date</label>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="date" id="checkOut" required>
+                        <label>Check-out Date</label>
+                    </div>
+    
+                    <div class="form-group">
+                        <select id="nights" required>
+                            <option value="">Number of Nights</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="roomType" required>
+                            <option value="">Select Room Type</option>
+                            <option value="deluxe">Deluxe Room</option>
+                            <option value="executive">Executive Suite</option>
+                            <option value="presidential">Presidential Suite</option>
+                            <option value="family">Family Suite</option>
+                        </select>
+                    </div>
+                    <div class="price-details">
+                        <h3>Price Details</h3>
+                        <div class="price-row">
+                            <span>Room Type Rate:</span>
+                            <span id="roomTypeRate">₹0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Adults Cost:</span>
+                            <span id="adultsCost">₹0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Children Cost:</span>
+                            <span id="childrenCost">₹0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Number of Nights:</span>
+                            <span id="nightsCount">0</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total Amount:</span>
+                            <span id="totalPrice">₹0</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Confirm Booking</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

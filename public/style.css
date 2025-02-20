@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+    --first-color: hsl(82, 60%, 28%);
+    --title-color: hsl(0, 0%, 15%);
+    /* --text-color: white; */
+    --body-color: hsl(0, 0%, 95%);
+    --container-color: hsl(0, 0%, 100%);
+    --text-color: #2c3e50;
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: .900rem;
+  }
+  
+  @media screen and (min-width: 1120px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --small-font-size: .875rem;
+    }
+  }
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+.hero{
+    position: relative;
+    background-image: url(Assets/stairs-in-hotel.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0,);
+}
+.hero-text{
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#para{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+}
+.book{
+  width: 40%;
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.9em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.book:hover{
+  border: 1px solid white;
+}
+button:active {
+  box-shadow: 4px 4px 12px #88caf0, -4px -4px 12px #ffffff;
+}
+.aboutus{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+.aboutus h1{
+    margin-top: 4%;
+    font-size:  40px;
+}
+#About{
+    position: absolute;
+    /* border: 2px solid blue; */
+    font-size: 22px;
+    /* height: auto; */
+    width: 70%;
+    margin-left: 12%;
+    font-style: italic;
+    padding: 3% 5% 0% 5%;
+}
+.pho-box{
+    position: relative;
+    top: 30%;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    display: grid;
+    align-items: start;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+.card__container {
+    /* display: grid; */
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 3.5rem;
+}
+.card__article {
+    position: relative;
+    overflow: hidden;
+}
+.card__img {
+    border-radius: 1rem;
+    width: 250px;
+    height: 250px; 
+}
+.card__data {
+    width: 280px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+.card__description {
+    color: blue;
+    display: block;
+    font-size:12px;
+    margin-bottom: .25rem;
+}
+.card__title {
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+.card__button {
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+}
+.card__button:hover {
+    text-decoration: underline;
+}
+.card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+  
+  .card__article:hover {
+    animation: remove-overflow 2s forwards;
+}
+  
+  .card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+  
+  .card__article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+}
+/* card animation */
+@keyframes show-data {
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(-7rem);
+    }
+  }
+  
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+  
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-7rem);
+    }
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(.5rem);
+    }
+  }
+  
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    50% {
+      overflow: hidden;
+    }
+  }
+  
+  @media screen and (max-width: 340px) {
+    .container {
+      margin-inline: 1rem;
+    }
+  
+    .card__data {
+      width: 250px;
+      padding: 1rem;
+    }
+  }
+
+.amenities{
+    position: relative;
+    /* border: 2px solid rgb(4, 0, 255); */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#ame{
+  padding-top: 4%;
+  font-size: 40px;
+}
+#hospitality{
+  position: absolute;
+  font-size: 22px;
+  width: 70%;
+  margin-left: 12%;
+  font-style: italic;
+  padding: 3% 5% 0% 5%;
+  
+}
+.all-img{
+  display: flex;
+  margin-top: 18%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.all-img img{
+  width: 350px;
+  height: 250px;
+  border-radius: 20px;
+}
+.all-img h1{
+  margin: 5%;
+  font-family: serif;
+}
+#hr1{
+  margin-left: 30px;
+  width: 95%;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.589);
+  border-radius: 80%;
+}
+
+/* Hotel Booking form */
+
+.booking-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-header h2 {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  position: relative;
+  margin: 0%;
+}
+
+input, select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  color: var(--text-color);
+  transition: var(--transition);
+  background: white;
+}
+
+input:focus, select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 5px;
+  color: #666;
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+input:focus + label,
+input:valid + label,
+input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+.focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: var(--transition);
+}
+
+input:focus ~ .focus-border,
+input:valid ~ .focus-border {
+  width: 100%;
+}
+
+input[type="tel"] {
+  letter-spacing: 1px;
+}
+
+input#aadharCard {
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+.phone-group input {
+  padding-left: 50px;
+}
+
+.phone-group::before {
+  content: "+91";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 16px;
+}
+
+.price-details {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-top: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.price-details h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-row.total {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid var(--secondary-color);
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+#roomTypeRate, #adultsCost, #childrenCost, #nightsCount, #totalPrice {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.price-row.total #totalPrice {
+  color: var(--accent-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  margin-top: 40px;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+.payment-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.upi-section {
+  margin: 20px 0;
+}
+
+.upi-section input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.payment-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
+@media only screen and (max-width:767px){
+  .heading{
+      text-align: left;
+  }
+  .square{
+      padding: 0px 30px !important;
+      margin-top: 10px!important;
+  }
+
+  .p-list li , .l-list li , .contact li{
+      text-align: left;
+  }
+  .social-media{
+      padding-left: 0!important;
+  }
+
+  .social-media li{
+      margin: 5px;
+  }
+}
