@@ -6,60 +6,99 @@
     <title>Hotel Royal respite</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Assets/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
     <section class="hero">
         <div class="hero-text">
-            <h1>Welcome to <span style="color: orange;">Royal respite</span></h1><br>
+            <h1>Welcome to <span style="color: orange;">Royal Respite</span></h1><br>
+        </div>
+        <div class="hero-logo">
+            <img src="Assets/Logo-1.png" alt="">
         </div>
         <div id="para">
             <p>We Provide rooms at a very good price along with great amenities to make your living experience awesome</p><br>
             <button class="book">Explore</button>
         </div> 
     </section>
-    <section class="aboutus">
-        <h1>About us</h1>
-        <div id="About">
-            <p>Looking for a vacation to leave behind the hustle of everyday life and indulge in world-class hospitality at exotic locations? Look no further than the leading & fastest growing hotel chain of Eastern India, Hotel Royal respite. Your unwinding days with us will be the perfect blend of leisure, comfort, convenience & class.</p>
-            <br>
-            <p>We are currently present at Puri, Mandarmoni, Kolaghat, Tarapith, Darjeeling, Taki & Sundarban to make your well deserved vacation a truly unforgettable affair.</p><br><br>
-        </div>
-        <section class="pho-box">
-            <div class="container">
-                <div class="card__container">
-                    <article class="card__article">
-                        <img src="Assets/1room.jpeg" alt="image" class="card__img">
-                        <div class="card__data">
-                            <span class="card__description">Master Hall</span>
-                            <h2 class="card__title">Single Room</h2>
-                            <a href="#" class="card__button">Read More</a>
-                         </div>
-                      </article>
-                      <article class="card__article">
-                        <img src="Assets/2room.webp" alt="image" class="card__img">
-          
-                        <div class="card__data">
-                           <span class="card__description">Master Hall,Master bedroom</span>
-                           <h2 class="card__title">Executive Suite</h2>
-                           <a href="#" class="card__button">Read More</a>
-                        </div>
-                     </article>
-          
-                     <article class="card__article">
-                        <img src="Assets/3room.jpeg" alt="image" class="card__img">
-          
-                        <div class="card__data">
-                           <span class="card__description">The most luxurious,multiple bedrooms,dining area</span>
-                           <h2 class="card__title">Presidential Suite</h2>
-                           <a href="#" class="card__button">Read More</a>
-                        </div>
-                     </article>
+    <section class="Introduction">
+            <div class="video-container">
+                <video id="myVideo">
+                    <source src="Assets/Hot-ani.mp4" type="video/mp4">
+                </video>
+                <button id="playButton" class="control-button">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="muteButton" class="control-button mute-button">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            <div class="content-container">
+                <div class="image-container">
+                    <img src="Assets/com.png" alt="Content Image">
+                </div>
+                <div class="text-container">
+                    <p>Exclusive Private Villas | Seclude Beach | Vintage Luxury Villas | Opulent Interiors | Unmatched Hospitality</p></br><br>
+                    <p>Welcome to Royal Respite, where grandeur meets tranquility. Immerse yourself in a world of sophisticated elegance, absolute privacy, and impeccable cleanliness. Experience breathtaking outdoor beauty and the finest luxuries designed for the elite. Book your private villa today for an extraordinary royal retreat!"</p>
                 </div>
             </div>
-        </section>
     </section>
-    <hr id="hr1">
+    <section class="Rooms">
+        <div class="rooms-container">
+            <div class="room-card">
+                <img src="Assets/com-4.jpeg" alt="Room 1">
+                <div class="room-info">
+                    <div class="price-rating">
+                        <span>$99</span>
+                        <span class="rating">⭐ 4.9</span>
+                    </div>
+                    <h3>Deluxe Room</h3>
+                    <p>1 Bed &bull; 2 Room</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div class="room-card">
+                <img src="Assets/com-3.jpeg" alt="Room 2">
+                <div class="room-info">
+                    <div class="price-rating">
+                        <span>$99</span>
+                        <span class="rating">⭐ 4.9</span>
+                    </div>
+                    <h3>Deluxe Room</h3>
+                    <p>1 Bed &bull; 2 Room</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div class="room-card">
+                <img src="Assets/com-6.jpeg" alt="Room 3">
+                <div class="room-info">
+                    <div class="price-rating">
+                        <span>$99</span>
+                        <span class="rating">⭐ 4.9</span>
+                    </div>
+                    <h3>Deluxe Room</h3>
+                    <p>1 Bed &bull; 2 Room</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Large Horizontal Card -->
+            <div class="room-card large horizontal">
+                <img src="Assets/com-5.jpeg" alt="Large Room">
+                <div class="room-info">
+                    <div class="price-rating">
+                        <span>$99</span>
+                        <span class="rating">⭐ 4.9</span>
+                    </div>
+                    <h3>Deluxe Room</h3>
+                    <p>1 Bed &bull; 2 Room</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="amenities">
         <h1 id="ame">Amenities we serve</h1>
         <div id="hospitality">
@@ -216,8 +255,6 @@
                             <span id="childrenCost">₹0</span>
                         </div>
                         <div class="price-row">
-                            <span>Number of Nights:</span>
-                            <span id="nightsCount">0</span>
                         </div>
                         <div class="price-row total">
                             <span>Total Amount:</span>

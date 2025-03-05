@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('myVideo');
+    const playButton = document.getElementById('playButton');
+    const muteButton = document.getElementById('muteButton');
+    const playIcon = playButton.querySelector('i');
+    const muteIcon = muteButton.querySelector('i');
+
+    playButton.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            playIcon.className = 'fas fa-pause';
+        } else {
+            video.pause();
+            playIcon.className = 'fas fa-play';
+        }
+    });
+
+    muteButton.addEventListener('click', () => {
+        video.muted = !video.muted;
+        muteIcon.className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+    });
+});
+
 // Room rate configurations
 const ROOM_RATES = {
     deluxe: { adult: 2000, child: 1400, multiplier: 1 },
